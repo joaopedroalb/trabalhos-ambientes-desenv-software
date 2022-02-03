@@ -54,7 +54,6 @@ const quickSort = (lst) => {
     let right = []
     let equals = []
 
-    console.log(pivot)
     for(let value of lst){
         if(value < pivot){
             left.push(value)
@@ -71,3 +70,4 @@ const quickSort = (lst) => {
 
     return [...quickSort(left),...equals,...quickSort(right)]
 }
+
