@@ -1,2 +1,2 @@
 # trabalhos-ambientes-desenv-software
-Trabalhos da cadeira ao longo do semestre
+Entregáveis da cadeira ao longo do semestre
