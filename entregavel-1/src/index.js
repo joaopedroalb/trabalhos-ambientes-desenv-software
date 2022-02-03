@@ -43,3 +43,31 @@ const mdc = (x,y) =>{
 
     return x;
 }
+
+const quickSort = (lst) => {
+    if(lst.length < 2)
+        return lst 
+    
+    const pivot = lst[Math.floor(Math.random()*lst.length)]
+
+    let left = []
+    let right = []
+    let equals = []
+
+    console.log(pivot)
+    for(let value of lst){
+        if(value < pivot){
+            left.push(value)
+        }
+
+        if(value > pivot){
+            right.push(value)
+        }
+
+        if(value == pivot){
+            equals.push(value)
+        }
+    }
+
+    return [...quickSort(left),...equals,...quickSort(right)]
+}
