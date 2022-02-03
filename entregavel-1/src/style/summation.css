@@ -1,0 +1,79 @@
+.containerBg{
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContainerInputSelectNumber{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7rem;
+}
+
+.ContainerInputSelectNumber label{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.ContainerInputSelectNumber input{
+    width: 100px;
+    padding: .4rem;
+    border-radius: 7px;
+}
+
+.btnSum{
+    width: 150px;
+    padding: .6rem;
+    border-radius: 6px;
+    border: none;
+    background:#ffff ;
+    font-weight: 700;
+    cursor: pointer;
+    
+    transition: 400ms;
+}
+
+.btnSum:hover{
+    transform: scale(1.10);
+}
+
+.containerInputGenerated{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    gap: 2rem;
+}
+
+.containerInputGenerated div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+}
+
+.containerInputGenerated input{
+    width: 70px;
+    padding: .3rem;
+    border-radius: 5px;
+}
+
+.containerResBg{
+    width: 100%;
+    min-height: 100vh;
+
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}

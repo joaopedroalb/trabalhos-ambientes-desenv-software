@@ -73,6 +73,9 @@ const quickSort = (lst) => {
 
 //HTML connections
 
+
+//Numero Primo
+
 function handleClickPrime(){
     const responseTitle = document.getElementById('response')
     const value = document.getElementById('inputPrime').value
@@ -82,4 +85,85 @@ function handleClickPrime(){
     responseTitle.innerHTML = text
 }
 
+//Somatorio
+
+let qtdeInputSum = 0;
+
+function handleGenerateInputs(){
+
+    const containerGlobal = document.getElementById('containerBg')
+    const qtdeInput = document.getElementById('qtdeInput').value
+    const inputContainer = document.getElementById('containerInputGenerated')
+    inputContainer.style = "display:flex"
+    document.getElementById('ContainerInputSelectNumber').style = "display:none"
+
+    if(qtdeInput > 0){
+
+        qtdeInputSum = qtdeInput
+
+        for(let i = 0; i <qtdeInput; i++){
+            let container = document.createElement("div")
+            let label = document.createElement('label')
+            let input = document.createElement('input')
+
+            input.id = `inputSum${i+1}`
+
+            label.innerHTML = `Digite o valor do numero : ${i+1}`
+            container.appendChild(label)
+            container.appendChild(input)
+            inputContainer.appendChild(container)
+        }
+
+        let button = document.createElement("button")
+        button.innerHTML = "Somar"
+        button.className = "btnSum"
+        button.id = "sumBtn"
+        button.onclick = () => handleClickSum()
+
+        containerGlobal.appendChild(button)
+    }
+}
+
+function handleClickSum(){
+    if(qtdeInputSum > 0 ){
+        let lst = []
+
+        for(let i = 0 ; i<qtdeInputSum; i++){
+            let id = `inputSum${i+1}`
+
+            const value = isNaN(parseFloat(document.getElementById(id).value)) ? 0:parseFloat(document.getElementById(id).value)
+
+            lst.push(value)
+        }
+
+        let sum = summation(lst)
+        const oldContainerGlobal = document.getElementById('containerBg')
+        const newContainerGlobal = document.getElementById('containerResBg')
+
+        oldContainerGlobal.style = "display:none";
+        newContainerGlobal.style = "display: flex"
+
+        const titleRes = document.getElementById('resultTitle')
+
+        titleRes.innerHTML = `O somatorio de ${[...lst]} é ${sum}`
+    }
+}
+
+function handleRestartSum(){
+    qtdeInputSum = 0;
+    
+    const newContainerGlobal = document.getElementById('containerBg')
+    const oldContainerGlobal = document.getElementById('containerResBg')
+    const inputContainer = document.getElementById('containerInputGenerated')
+    const btnSum = document.getElementById('sumBtn')
+
+    newContainerGlobal.style = "display:flex";
+    oldContainerGlobal.style = "display:none"
+    inputContainer.style = "display:none"
+    inputContainer.innerHTML = ""
+    newContainerGlobal.removeChild(btnSum)
+    document.getElementById('ContainerInputSelectNumber').style = "display:flex"
+}
+
+//fim do somatorio
 

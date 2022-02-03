@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somatorio</title>
+
+    <link rel="stylesheet" type="text/css" href="../style/summation.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../global.css" media="screen" />
+
+    <script src="../index.js"></script>
+</head>
+<body>
+    <div class="containerBg" id="containerBg">
+        <div class="ContainerInputSelectNumber" id="ContainerInputSelectNumber">
+            <label>Digite a quantidade de numeros para o somatorio</label>
+            <input type="number" id="qtdeInput"/>
+            <button onclick="handleGenerateInputs()" class="btnSum">Selecionar</button>
+        </div>
+
+        <div class="containerInputGenerated" id="containerInputGenerated">
+        </div>
+    </div>
+
+    <div id="containerResBg" class="containerResBg">
+        <h1 id="resultTitle"></h1>
+        <button class="btnSum" onclick="handleRestartSum()">Restart</button>
+    </div>
+</body>
+</html>
