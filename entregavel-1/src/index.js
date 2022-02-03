@@ -23,3 +23,11 @@ const summation = (lstNumber) => {
             .map((value)=>{return Number.isInteger(value)&&value})
             .reduce((a,b)=>{return a+b})
 }
+
+const fibonacci = (number) =>{
+    if(number <= 2){
+        return number-1
+    }
+
+    return fibonacci(number-1)+fibonacci(number-2)
+}
