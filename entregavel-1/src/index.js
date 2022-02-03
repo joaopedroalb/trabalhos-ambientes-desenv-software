@@ -31,3 +31,15 @@ const fibonacci = (number) =>{
 
     return fibonacci(number-1)+fibonacci(number-2)
 }
+
+const mdc = (x,y) =>{
+    let remainder = x<y ? x:y
+
+    while (remainder > 0){
+        remainder = x % y;
+        x = y;
+        y = remainder;
+    } 
+
+    return x;
+}
