@@ -1,4 +1,4 @@
-function isPrimerWithSqrt(number){
+const isPrimerWithSqrt = (number) =>{
     //https://www.youtube.com/watch?v=4tbuSPSqQWU
     //Para facilitar o loop a gente pega a raiz  do numero e gerar um numero bem menor para o loop
     let sqrtNumber = Math.sqrt(number)
@@ -10,7 +10,7 @@ function isPrimerWithSqrt(number){
     return number > 1 
 }
 
-function isPrime(number){
+const isPrime = (number) => {
     for(let i = 2; i < number; i++){
         if(number % i === 0) return false
     }
@@ -18,3 +18,8 @@ function isPrime(number){
     return number > 1 
 }
 
+const summation = (lstNumber) => {
+    return lstNumber
+            .map((value)=>{return Number.isInteger(value)&&value})
+            .reduce((a,b)=>{return a+b})
+}
