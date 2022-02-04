@@ -51,3 +51,13 @@
     border-radius: 6px;
     padding: .3rem;
 }
+
+.responseContainer{
+    display: flex;
+    align-items: center;
+}
+
+.responseContainer label{
+    font-size: 1.5rem;
+    font-weight: 600;
+}   

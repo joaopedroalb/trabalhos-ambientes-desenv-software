@@ -185,3 +185,24 @@ function handleClickFibo(){
     }
 }
 
+//mdc
+
+function handleClickMdc(){
+    const valueA = parseFloat(document.getElementById('firstInput').value)
+    const valueB = parseFloat(document.getElementById('secondInput').value)
+
+    let responseContainer = document.getElementById('responseContainer')
+    responseContainer.innerHTML = ''
+
+    if(valueA > 0 && valueB > 0 && Number.isInteger(valueA) && Number.isInteger(valueB)){
+        const value = mdc(valueA,valueB)
+        let label = document.createElement('label')
+        label.innerHTML = `O maior divisor comum é ${value}`
+        responseContainer.appendChild(label)
+    }else{
+        let label = document.createElement('label')
+        label.innerHTML = "Favor colocar valores validos"
+        responseContainer.appendChild(label)
+    }
+}
+
