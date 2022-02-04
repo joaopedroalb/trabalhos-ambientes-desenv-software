@@ -7,4 +7,47 @@
     align-items: center;
     justify-content: start;
     padding: 4rem;
+
+    gap: 4rem;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.formContainer button{
+    width: 100px;
+    padding: .6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: 400ms;
+}
+
+.formContainer button:hover{
+    transform: scale(1.10);
+}
+
+.inputContainerBg{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+}
+
+.inputContainer input{
+    width: 70px;
+    border: none;
+    border-radius: 6px;
+    padding: .3rem;
 }
