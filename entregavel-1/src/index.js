@@ -165,5 +165,24 @@ function handleRestartSum(){
     document.getElementById('ContainerInputSelectNumber').style = "display:flex"
 }
 
-//fim do somatorio
+//Fibonacci 
+
+function handleClickFibo(){
+    const value = document.getElementById('fiboInput').value
+
+    if(value>0){
+        let responseContainer = document.getElementById('responseContainer')
+        responseContainer.innerHTML = ''
+        for(let i = 0; i<value; i++){
+            let container = document.createElement('div')
+            let label = document.createElement('label')
+
+            let value = fibonacci(i+1)
+
+            label.innerHTML = value
+
+            responseContainer.appendChild(label)
+        }
+    }
+}
 
