@@ -174,7 +174,6 @@ function handleClickFibo(){
         let responseContainer = document.getElementById('responseContainer')
         responseContainer.innerHTML = ''
         for(let i = 0; i<value; i++){
-            let container = document.createElement('div')
             let label = document.createElement('label')
 
             let value = fibonacci(i+1)
