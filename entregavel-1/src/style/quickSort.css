@@ -45,3 +45,8 @@
     justify-content: center;
     gap: 1rem;
 }
+
+.containerResult label{
+    font-size: 1.5rem;
+    font-weight: 600;
+}

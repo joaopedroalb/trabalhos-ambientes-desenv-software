@@ -206,3 +206,22 @@ function handleClickMdc(){
     }
 }
 
+//quicksort
+
+function handleClickQuickSort(){
+    let lst = document.getElementById('lstSort').value.split(',')
+    lst = lst
+            .filter(value=>!isNaN(parseFloat(value)))
+            .map(value=>{return parseFloat(value)})
+    
+
+    const qcksort = quickSort(lst)
+
+    let label = document.createElement('label')
+    label.innerHTML = qcksort.length>0?`A lista ordenada: ${[...qcksort]}`:'A lista esta vazia'
+
+    let containerRes = document.getElementById('containerResult')
+    containerRes.innerHTML = ''
+    containerRes.appendChild(label)
+    
+}
