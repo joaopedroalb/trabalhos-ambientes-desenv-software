@@ -44,3 +44,8 @@
 .inputContainer button:hover{
     transform: scale(1.10);
 }
+
+.resContainer label{
+    font-size: 1.5rem;
+    font-weight: 500;
+}

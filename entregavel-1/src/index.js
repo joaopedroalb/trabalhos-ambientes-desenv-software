@@ -235,3 +235,18 @@ function handleClickQuickSort(){
     containerRes.appendChild(label)
     
 }
+
+//int count
+
+function handleClickIntCount(){
+    let value = document.getElementById('inputIncrement').value
+
+    let label = document.createElement('label')
+    label.innerHTML = `O valor do incremento de ${value} é ${intCount(value)}`
+
+    let resContainer = document.getElementById('resContainer')
+    resContainer.innerHTML = ''
+    resContainer.appendChild(label)
+    
+
+}
