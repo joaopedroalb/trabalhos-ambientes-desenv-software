@@ -78,7 +78,7 @@ const quickSort = (lst) => {
 
 function handleClickPrime(){
     const responseTitle = document.getElementById('response')
-    const value = document.getElementById('inputPrime').value
+    const value = Number(document.getElementById('inputPrime').value)
 
     const text = isPrimerWithSqrt(value) ? `${value} é primo` : `${value} NAO é primo`
 
