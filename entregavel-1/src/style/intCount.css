@@ -1,0 +1,46 @@
+.containerBg{
+    width: 100%;
+    min-height:100vh ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+.inputContainer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inputContainer input{
+    width: 70px;
+    border: none;
+    padding: .3rem;
+    border-radius: 4px;
+}
+
+.inputContainer input:focus{
+    outline: none;
+}
+
+.inputContainer button{
+    width: 120px;
+    padding: .5rem;
+    border-radius: 6px;
+    border: none;
+
+    background-color: #ffff;
+    cursor: pointer;
+    font-weight: 700;
+
+    transition: 400ms;
+}
+
+.inputContainer button:hover{
+    transform: scale(1.10);
+}
