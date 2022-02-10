@@ -71,8 +71,18 @@ const quickSort = (lst) => {
     return [...quickSort(left),...equals,...quickSort(right)]
 }
 
-//HTML connections
+const intCount = (number) =>{
+    let increment = 0;
+    let valueNumber = Number(number)
 
+    if(!isNaN(valueNumber)){
+        for(let i = 1; i<=number; i++) 
+            increment += i;
+    }
+
+    return increment
+}
+//HTML connections
 
 //Numero Primo
 
